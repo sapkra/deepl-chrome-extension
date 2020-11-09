@@ -2,7 +2,7 @@ html {
     overflow: auto;
 }
 
-html, body, div, iframe {
+html, body, iframe {
     margin: 0px;
     padding: 0px;
     height: 100%;
@@ -11,11 +11,13 @@ html, body, div, iframe {
 
 body {
     width: 800px;
-    height: 425px;
+    height: 460px;
 }
 
 iframe {
     display: block;
-    width: 100%;
+    width: calc(100% + 15px);
+    height: calc(100% + 70px);
     border: none;
+    transform: translateY(-70px);
 }
