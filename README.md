@@ -1,4 +1,4 @@
-# DeepL Chrome Extension
+# DeepL Translator Plus Chrome Extension
 
 This plugin enables fast translations using deepl.com.
 
@@ -7,7 +7,7 @@ This plugin enables fast translations using deepl.com.
 - Restore last translated text
 - Hide cookie consent if accepted on deepl.com
 
-## Contributations welcome!
+## Contributions welcome!
 
 Here are some ideas:
 - Options page to configure default languages
