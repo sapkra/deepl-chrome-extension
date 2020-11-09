@@ -7,7 +7,7 @@ const generateUrl = async (selectedText) => {
     targetLang = 'de',
   } = await getFromStorage(['sourceLang', 'targetLang']);
 
-  return selectedText !== ""
-    ? `https://www.deepl.com/translator#${sourceLang}/${targetLang}/${selectedText}`
-    : `https://www.deepl.com/translator#${sourceLang}/${targetLang}`;
+  return selectedText === ""
+    ? `https://www.deepl.com/translator#${sourceLang}/${targetLang}`
+    : `https://www.deepl.com/translator#${sourceLang}/${targetLang}/${selectedText}`;
 };
