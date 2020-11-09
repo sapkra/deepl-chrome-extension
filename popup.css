@@ -1,23 +1,23 @@
 html {
-    overflow: auto;
+  overflow: auto;
 }
 
 html, body, iframe {
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
-    border: none;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  border: none;
 }
 
 body {
-    width: 800px;
-    height: 460px;
+  width: 800px;
+  height: 460px;
 }
 
 iframe {
-    display: block;
-    width: calc(100% + 15px);
-    height: calc(100% + 70px);
-    border: none;
-    transform: translateY(-70px);
+  display: block;
+  width: calc(100% + 15px);
+  height: calc(100% + 70px);
+  border: none;
+  transform: translateY(-70px);
 }
