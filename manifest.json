@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "DeepL Translator Pro",
+  "description": "This plugin enables fast translations using deepl.com.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "defaut_icon": "icon.png"
+  },
+
+  "icons": {
+  	"128": "icon.png"
+  },
+
+  "permissions": [
+    "storage",
+    "cookies",
+    "http://*/",
+    "https://*/"
+  ]
+}
+
