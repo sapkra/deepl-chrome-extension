@@ -5,7 +5,7 @@
   "description": "This plugin enables fast translations using deepl.com.",
   "version": "1.1.0",
 
-  "browser_action": {
+  "page_action": {
     "default_popup": "popup.html",
     "defaut_icon": "icon.png"
   },
@@ -26,6 +26,7 @@
     "storage",
     "cookies",
     "contextMenus",
+    "declarativeContent",
     "https://*.deepl.com/"
   ]
 }
