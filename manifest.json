@@ -15,10 +15,10 @@
   },
 
   "permissions": [
+    "activeTab",
     "storage",
     "cookies",
-    "http://*/",
-    "https://*/"
+    "https://*.deepl.com/"
   ]
 }
 
