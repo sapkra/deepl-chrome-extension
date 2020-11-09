@@ -1,11 +1,10 @@
 'use strict';
-(function () {
+(() => {
     chrome.cookies.get({
         url: 'https://www.deepl.com',
         name: 'privacySettings',
     },
-    function (cookie) {
-        console.log(cookie);
+    (cookie) => {
         chrome.cookies.set({
             url: 'https://www.deepl.com',
             name: cookie.name,
@@ -23,17 +22,17 @@
         code: "window.getSelection().toString();"
     }, function(selection) {
         var selectedText = selection[0];
-        var url = 'http://www.deepl.com/';
-        if(selectedText != "") {
-            url = "https://www.deepl.com/translator#en/de/" + selectedText;
+        generateUrl(selectedText);
+        var url = generateUrl(selectedText);
+        if (selectedText !== "") {
             document.getElementsByTagName("iframe")[0].setAttribute('src', url);
             chrome.storage.sync.set({'lastText': selectedText}, function() {
                 console.log('Saved:' + selectedText);
             });
-        }else{
+        } else {
             chrome.storage.sync.get(['lastText'], function(result) {
-                if (result.lastText != "") {
-                    url = "https://www.deepl.com/translator#en/de/" + result.lastText;
+                if (result.lastText !== "") {
+                    url = generateUrl(result.lastText);
                 }
                 document.getElementsByTagName("iframe")[0].setAttribute('src', url);
             });

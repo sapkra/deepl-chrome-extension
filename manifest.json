@@ -10,6 +10,11 @@
     "defaut_icon": "icon.png"
   },
 
+  "background": {
+    "scripts": ["helpers.js", "background.js"],
+    "persistent": false
+  },
+
   "icons": {
   	"128": "icon.png"
   },
@@ -18,6 +23,7 @@
     "activeTab",
     "storage",
     "cookies",
+    "contextMenus",
     "https://*.deepl.com/"
   ]
 }
