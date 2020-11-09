@@ -1,6 +1,6 @@
-chrome.contextMenus.onClicked.addListener(({ selectionText }) => {
+chrome.contextMenus.onClicked.addListener(async ({ selectionText }) => {
   chrome.tabs.create({
-    url: generateUrl(selectionText),
+    url: await generateUrl(selectionText),
     selected: true,
   });
 });

@@ -7,9 +7,7 @@ This plugin enables fast translations using deepl.com.
 - Restore last translated text
 - Hide cookie consent if accepted on deepl.com
 - Hide header to only show translator
-
-## Contributions welcome!
-
-Here are some ideas:
 - Options page to configure default languages
 - Entry in context menu to translate selected text
+
+Contributions welcome!

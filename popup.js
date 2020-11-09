@@ -1,5 +1,6 @@
 'use strict';
 (() => {
+    // Make privacy cookie available in iframe
     chrome.cookies.get({
         url: 'https://www.deepl.com',
         name: 'privacySettings',
@@ -18,21 +19,22 @@
             storeId: cookie.storeId,
         });
     });
-    chrome.tabs.executeScript( {
+
+    // Get selected text and 
+    chrome.tabs.executeScript({
         code: "window.getSelection().toString();"
-    }, function(selection) {
-        var selectedText = selection[0];
-        generateUrl(selectedText);
-        var url = generateUrl(selectedText);
+    }, async (selection) => {
+        const selectedText = selection[0];
+        let url = await generateUrl(selectedText);
         if (selectedText !== "") {
             document.getElementsByTagName("iframe")[0].setAttribute('src', url);
-            chrome.storage.sync.set({'lastText': selectedText}, function() {
+            chrome.storage.sync.set({'lastText': selectedText }, () => {
                 console.log('Saved:' + selectedText);
             });
         } else {
-            chrome.storage.sync.get(['lastText'], function(result) {
+            chrome.storage.sync.get(['lastText'], async (result) => {
                 if (result.lastText !== "") {
-                    url = generateUrl(result.lastText);
+                    url = await generateUrl(result.lastText);
                 }
                 document.getElementsByTagName("iframe")[0].setAttribute('src', url);
             });
