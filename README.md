@@ -2,6 +2,8 @@
 
 This plugin enables fast translations using deepl.com.
 
+[![Available in the Chrome Web Store](./webstore-button.png)](https://chrome.google.com/webstore/detail/deepl-translator-plus/oaifgiocjahpndddpenihgnoccbmkghe)
+
 ## Features:
 - Automatically translate selected text
 - Restore last translated text
